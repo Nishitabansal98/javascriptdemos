@@ -15,17 +15,19 @@ var john = {
 };
 console.log(john);
 
-function greet(person) {
-  console.log('Hi ' + person.firstname + ' ' + person.lastname);
+function greet(box) {
+  console.log(
+    'Hi ' + box.firstname + ' ' + box.lastname + ' from ' + box.address.city
+  );
 }
 
 greet(john);
-greet('X');
+// greet('X');
 
-greet({
-  firstname: 'Mary',
-  lastname: 'Smith',
-});
+// greet({
+//   firstname: 'Mary',
+//   lastname: 'Smith',
+// });
 
 console.log(john);
 console.log(JSON.stringify(john));
@@ -34,3 +36,5 @@ var jsonstring =
   '{"firstname":"Max","lastname":"Johnson","address":{"street":"111 main street","city":"NY","state":"NY"}}';
 var max = JSON.parse(jsonstring);
 console.log(max);
+
+console.log(greet);
